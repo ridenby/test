@@ -10,3 +10,5 @@ let person = {
 let test = () => {
     console.log('ok');
 };
+
+let testVar = "Тестовая переменная";
