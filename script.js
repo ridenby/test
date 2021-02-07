@@ -12,3 +12,5 @@ let test = () => {
 };
 
 let testVar = "Тестовая переменная";
+
+console.log('yepp');
