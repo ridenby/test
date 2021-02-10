@@ -1,16 +1,6 @@
 'use strict';
 
-console.log('test');
+let arr = ['23ffw', 'ergwer', '3434fg', 'asasas'],
+    i = arr.join(', ');
 
-let a = 0;
-let person = {
-    name: 'John'
-};
-
-let test = () => {
-    console.log('ok');
-};
-
-let testVar = "Тестовая переменная";
-
-console.log('yepp');
+console.log(i);
