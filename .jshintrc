@@ -6,7 +6,7 @@
     "maxlen": 80,
     "trailing": true,
     "curly": true,
-    "strict": "global",
+    "strict": false,
     "browser": true,
     "jquery": true,
     "esversion": 6

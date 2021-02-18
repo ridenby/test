@@ -1,19 +1,26 @@
-'use strict';
+let btn = document.querySelectorAll('button'),
+    wrap = document.querySelector('.wrapper'),
+    link = document.getElementsByTagName('a');
 
-let tenzor = document.querySelectorAll('.circle'),
-    box = document.querySelectorAll('.box'),
-    wrapper = document.querySelector('.wrapper');
+btn[0].addEventListener('click', function(event) {
+    console.log('Кнопочное событие: ' + event.type + ' \n' + event.target + '\n' + event.clientX + ' / ' + event.clientY);
+});
 
-// tenzor.forEach((item, index, arr) => {
-//     item.style.backgroundColor = 'pink';
-// });
+wrap.addEventListener('click', function(event) {
+    console.log('Оболочное событие: ' + event.type + ' \n' + event.target + '\n' + event.clientX + ' / ' + event.clientY);
+});
 
-let div = document.createElement('div'),
-    text = document.createTextNode('Тут был и я');
+link[0].addEventListener('click', function(event) {
+    console.log('Оболочное событие: ' + event.type + ' \n' + event.target + '\n' + event.clientX + ' / ' + event.clientY);
+    event.preventDefault();
+});
 
-div.textContent = 'Privet <p></p>Mir';
-div.classList.add('black');
+btn.forEach(function(item) {
+    item.addEventListener('touchstart', function(event) {
+        console.log('Ты нажал кнопку!');
+    });
+});
 
-document.body.insertBefore(div, tenzor[0]);
-
-console.log(div);
+window.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});
